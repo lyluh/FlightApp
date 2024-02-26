@@ -1,0 +1,11 @@
+# Verify that a user cannot log in with the wrong password.
+
+# commands to execute:
+login user1 anything
+quit
+*
+
+# expected output:
+Login failed
+Goodbye
+*

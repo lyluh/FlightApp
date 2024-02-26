@@ -1,17 +1,19 @@
 -- Add all your SQL setup statements here. 
 
 CREATE TABLE Users_lyledeng (
-    username varchar(100) PRIMARY KEY,
-    password varchar(100)
+    username varchar(20) PRIMARY KEY NOT NULL,
+    password varbinary(144) NOT NULL,
+    balance int NOT NULL
 );
 
 CREATE TABLE Reservations_lyledeng (
-    rid varchar(100) PRIMARY KEY
-    numFlights int,
-    username varchar(100) REFERENCES Users_lyledeng,
-    fid1 int FOREIGN KEY REFERENCES Flights(fid),
+    rid varchar(100) PRIMARY KEY NOT NULL,
+    numFlights int NOT NULL,
+    username varchar(20) REFERENCES Users_lyledeng NOT NULL,
+    fid1 int FOREIGN KEY REFERENCES Flights(fid) NOT NULL,
     fid2 int FOREIGN KEY REFERENCES Flights(fid),
-)
+    paid int NOT NULL
+);  
 
 -- When we test your submission, you can assume that the following base
 -- tables have been created and loaded with data.  However, before testing

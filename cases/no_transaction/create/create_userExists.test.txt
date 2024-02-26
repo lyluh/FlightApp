@@ -1,0 +1,13 @@
+# Verify duplicate username can't be created
+
+# commands to execute:
+create user1 user1 100
+create user1 mypassword 999
+quit
+*
+
+# expected output from those commands:
+Created user user1
+Failed to create user
+Goodbye
+*

@@ -1,0 +1,11 @@
+# Verify that we can do a simple search
+
+# commands:
+search "Seattle WA" "Boston MA" 1 1 -1
+quit
+*
+
+# expected command output:
+num itineraries must be positive
+Goodbye
+*
