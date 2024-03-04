@@ -8,11 +8,12 @@ CREATE TABLE Users_lyledeng (
 
 CREATE TABLE Reservations_lyledeng (
     rid varchar(100) PRIMARY KEY NOT NULL,
-    numFlights int NOT NULL,
     username varchar(20) REFERENCES Users_lyledeng NOT NULL,
     fid1 int FOREIGN KEY REFERENCES Flights(fid) NOT NULL,
     fid2 int FOREIGN KEY REFERENCES Flights(fid),
-    paid int NOT NULL
+    paid int NOT NULL,
+    cost int NOT NULL,
+    date int NOT NULL
 );  
 
 -- When we test your submission, you can assume that the following base

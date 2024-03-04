@@ -1,0 +1,27 @@
+# Create one user, then try to login in two different sessions.
+
+# commands:
+create taylor mypassword 100
+login carly mypassword
+quit
+*
+
+# expected output:
+Created user taylor
+Logged in as carly
+Goodbye
+*
+
+##################### Terminal #2: #####################
+
+# commands:
+create carly mypassword 100
+login taylor mypassword
+quit
+*
+
+# expected output:
+Created user carly
+Logged in as taylor
+Goodbye
+*
